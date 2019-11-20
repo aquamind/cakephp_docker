@@ -15,6 +15,8 @@ services:
     ports:
       - "5432:5432"
     volumes:
+      # Windows の場合は data フォルダへのマウントでエラーが起こるらしい
+      # - ./docker/db/data:/var/lib/postgresql
       - ./docker/db/data:/var/lib/postgresql/data
   nginx:
     image: nginx
