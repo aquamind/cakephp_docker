@@ -11,7 +11,7 @@ services:
     links:
       - db
   db:
-    image: postgres
+    build: ./docker/db
     ports:
       - "5432:5432"
     volumes:
