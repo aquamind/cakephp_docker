@@ -18,6 +18,8 @@ services:
       # Windows の場合は data フォルダへのマウントでエラーが起こるらしい
       # - ./docker/db/data:/var/lib/postgresql
       - ./docker/db/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgrs
   nginx:
     image: nginx
     ports:
