@@ -15,9 +15,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      # Windows の場合は data フォルダへのマウントでエラーが起こるらしい
-      # - ./docker/db/data:/var/lib/postgresql
-      - ./docker/db/data:/var/lib/postgresql/data
+      - cakephp_pgdatavol:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: postgrs
   nginx:
@@ -31,3 +29,5 @@ services:
       - php
     links:
       - php
+volumes:
+  cakephp_pgdatavol:
