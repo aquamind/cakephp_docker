@@ -1,4 +1,5 @@
 docker/db/data/*
+docker/nginx/log/*
 /server/*
 
 # OS generated files #
