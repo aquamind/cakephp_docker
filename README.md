@@ -13,7 +13,7 @@ docker-compose exec php composer create-project --prefer-dist "cakephp/app:4.*" 
 ```
 
 ```shell
-docker-compose exec php composer require --dev phpunit/phpunit:"^5.7|^6.0"
+docker-compose exec php composer require --dev phpunit/phpunit:"^8.5"
 ```
 
 ```php:app.php
